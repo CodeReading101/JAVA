@@ -2,7 +2,7 @@
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter01/Welcome.java
 
 
-public class Main
+public class Welcome
 {
 	public static void main( String[] args ) {
 		// 환영 인사말을 출력

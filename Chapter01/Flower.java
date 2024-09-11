@@ -2,7 +2,7 @@
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter01/Flower.java
 
 
-public class Main
+public class Flower
 {
 	public static void main( String[] args ) {
 		// 분홍 꽃 모양을 출력

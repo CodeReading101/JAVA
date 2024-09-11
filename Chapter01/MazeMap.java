@@ -2,7 +2,7 @@
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter01/MazeMap.java
 
 
-public class Main
+public class MazeMap
 {
 	public static void main( String[] args ) {
 		// 먼저 미로 맵을 출력

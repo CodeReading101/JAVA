@@ -2,7 +2,7 @@
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter01/HelloWorld.java
 
 
-public class Main
+public class HelloWorld
 {
 	public static void main( String[] args ) {
 		// Hello, World!를 출력
