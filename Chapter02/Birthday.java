@@ -2,7 +2,7 @@
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter02/Birthday.java
 
 import java.util.Scanner;
-public class Main
+public class Birthday
 {
 	public static void main( String[] args ) {
 		// 년, 월, 일 초기화

@@ -2,39 +2,26 @@
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter02/WeatherNews.java
 
 import java.util.Scanner;
-public class Main
+public class WeatherNews
 {
 	public static void main( String[] args ) {
-		// 날씨 내용을 저장하는 변수 초기화
+		// 변수 초기화
 		Scanner scan = new Scanner( System.in );
-		String month = "";
-		String day = "";
-		String week = "";
-		String weatherReport = "";
-		String precaution = "";
-		int  lowSeoul = 0;
-		int  lowChuncheon = 0;
-		int  lowDaejeon = 0;
-		int  lowGwangju = 0;
-		int  lowBusan = 0;
-		int  lowJeju = 0;
-		int  highSeoul = 0;
-		int  highChuncheon = 0;
-		int  highDaejeon = 0;
-		int  highGwangju = 0;
-		int  highBusan = 0;
-		int  highJeju = 0;
+		int  month = 0, day = 0;
+		String week = "", weatherReport = "", precaution = "";
+		int  lowSeoul = 0, lowChuncheon = 0, lowDaejeon = 0, lowGwangju = 0, lowBusan = 0, lowJeju = 0;
+		int  highSeoul = 0, highChuncheon = 0, highDaejeon = 0, highGwangju = 0, highBusan = 0, highJeju = 0;
 		// 주요 날씨 내용을 입력
-		System.out.print( "오늘은 몇 월인가요: " );
-		month = scan.nextLine().trim();
-		System.out.print( "오늘은 몇 일인가요: " );
-		day = scan.nextLine().trim();
-		System.out.print( "오늘은 무슨 요일인가요: " );
-		week = scan.nextLine().trim();
 		System.out.print( "오늘의 기상특보는 무엇인가요: " );
 		weatherReport = scan.nextLine().trim();
 		System.out.print( "오늘의 주의사항은 무엇인가요: " );
 		precaution = scan.nextLine().trim();
+		System.out.print( "오늘은 무슨 요일인가요: " );
+		week = scan.nextLine().trim();
+		System.out.print( "오늘은 몇 월인가요: " );
+		month = scan.nextInt();
+		System.out.print( "오늘은 몇 일인가요: " );
+		day = scan.nextInt();
 		System.out.print( "서울 최저기온은 몇 도인가요: " );
 		lowSeoul = scan.nextInt();
 		System.out.print( "춘천 최저기온은 몇 도인가요: " );

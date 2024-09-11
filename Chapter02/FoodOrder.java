@@ -2,14 +2,12 @@
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter02/FoodOrder.java
 
 import java.util.Scanner;
-public class Main
+public class FoodOrder
 {
 	public static void main( String[] args ) {
-		// 변수 선언 및 초기화
+		// 변수 초기화
 		Scanner scan = new Scanner( System.in );
-		String mainDish = "";
-		String sauce = "";
-		String drink = "";
+		String mainDish = "", sauce = "", drink = "";
 		// 손님에게 주문 받기
 		System.out.println( "주문 도와드리겠습니다, 손님." );
 		// 메인요리 주문 받기

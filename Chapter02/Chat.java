@@ -2,15 +2,12 @@
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter02/Chat.java
 
 import java.util.Scanner;
-public class Main
+public class Chat
 {
 	public static void main( String[] args ) {
-		// 변수 선언 및 초기화
+		// 변수 초기화
 		Scanner scan = new Scanner( System.in );
-		String name = "";
-		String job = "";
-		String hobby = "";
-		String color = "";
+		String name = "", job = "", hobby = "", color = "";
 		// 친구와 대화하기
 		// 이름 물어보고 답하기
 		System.out.print( "안녕? 넌 이름이 뭐야: " );
