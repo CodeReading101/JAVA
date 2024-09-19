@@ -6,15 +6,15 @@ public class AutoboxingUnboxing
 	public static void main( String[] args )
 	{
 		int primitiveInt = 100;
-		Integer referenceInt = new Integer( 200 );
-		String stringInt = new String( "300" );
+		Integer referenceInt = 200;
+		String stringInt = "300";
 		System.out.println( "primitive=" + primitiveInt + " reference=" + referenceInt + " string=" +  stringInt);
 		
 		// 첫째, wrapper class 활용 예 살펴보기
 		referenceInt = Integer.parseInt( stringInt );
 		System.out.println( "primitive=" + primitiveInt + " reference=" + referenceInt + " string=" +  stringInt);
 		
-		referenceInt = new Integer( 400 );
+		referenceInt = 400;
 		stringInt = referenceInt.toString();
 		System.out.println( "primitive=" + primitiveInt + " reference=" + referenceInt + " string=" +  stringInt);
 		
@@ -22,7 +22,7 @@ public class AutoboxingUnboxing
 		referenceInt = primitiveInt;
 		System.out.println( "primitive=" + primitiveInt + " reference=" + referenceInt + " string=" +  stringInt);
 		
-		referenceInt = new Integer( 500 );
+		referenceInt = 500;
 		
 		// 셋째, unboxing 활용 예 살펴보기
 		primitiveInt = referenceInt;
