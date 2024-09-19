@@ -9,16 +9,21 @@ public class AutoboxingUnboxing
 		Integer referenceInt = new Integer( 200 );
 		String stringInt = new String( "300" );
 		System.out.println( "primitive=" + primitiveInt + " reference=" + referenceInt + " string=" +  stringInt);
+		
 		// 첫째, wrapper class 활용 예 살펴보기
 		referenceInt = Integer.parseInt( stringInt );
 		System.out.println( "primitive=" + primitiveInt + " reference=" + referenceInt + " string=" +  stringInt);
+		
 		referenceInt = new Integer( 400 );
 		stringInt = referenceInt.toString();
 		System.out.println( "primitive=" + primitiveInt + " reference=" + referenceInt + " string=" +  stringInt);
+		
 		// 둘째, autoboxing 활용 예 살펴보기
 		referenceInt = primitiveInt;
 		System.out.println( "primitive=" + primitiveInt + " reference=" + referenceInt + " string=" +  stringInt);
+		
 		referenceInt = new Integer( 500 );
+		
 		// 셋째, unboxing 활용 예 살펴보기
 		primitiveInt = referenceInt;
 		System.out.println( "primitive=" + primitiveInt + " reference=" + referenceInt + " string=" +  stringInt);
