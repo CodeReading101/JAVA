@@ -10,10 +10,13 @@ public class OverflowUnderflow
 		int min = -2147483648;
 		int overflow = 0;
 		int underflow = 0;
+		
 		// int의 최대값에 1을 더하면 overflow 발생
 		overflow = max + 1;
+		
 		// int의 최소값에 1을 빼면 underflow 발생
 		underflow = min - 1;
+		
 		// overflow와 underflow를 실습 결과 출력
 		System.out.println( "max     =  " + max );
 		System.out.println( "max + 1 = " + overflow + " ( overflow 발생 )" );
