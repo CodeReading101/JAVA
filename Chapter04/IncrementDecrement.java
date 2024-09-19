@@ -6,12 +6,14 @@ public class IncrementDecrement
 {
 	public static void main( String[] args ) {
 		int two = 2, pre = 0, post = 0;
+		
 		// 증가연산자 ++의 전위연산자와 후위연산자 실습 및 출력
 		pre = ++two;
 		System.out.println( "pre  = ++2 는 2+1( 3 ) 실행후 pre = " + pre );
 		two = 2;
 		post = two++;
 		System.out.println( "post = 2++ 는 post = " + post + " 실행후 2+1( 3 )" );
+		
 		// 감소연산자 --의 전위연산자와 후위연산자 실습 및 출력
 		two = 2;
 		pre = --two;
