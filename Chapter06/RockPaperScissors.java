@@ -6,49 +6,31 @@ public class RockPaperScissors
 {
 	public static void main( String[] args ) {
 		Scanner scan = new Scanner( System.in );
-		int playerA = 0;
-		int playerB = 0;
+		String playerA = "";
+		String playerB = "";
 		// A양 가위바위보 선택
-		System.out.print( "A양, 가위(1), 바위(2), 보(3) 중 하나를 숫자로 입력하세요: " );
-		playerA = scan.nextInt();
-		switch( playerA ) {
-		case 1:
-			System.out.println( "가위를 냈습니다." );
-			break;
-		case 2:
-			System.out.println( "바위를 냈습니다." );
-			break;
-		case 3:
-			System.out.println( "보를 냈습니다." );
-		}
+		System.out.print( "A양, 가위, 바위, 보 중 하나를 선택하세요: " );
+		playerA = scan.nextLine().trim();
+		System.out.println( playerA + "를 냈습니다." );
 		// B군 가위바위보 선택
-		System.out.print( "B군, 가위(1), 바위(2), 보(3) 중 하나를 숫자로 입력하세요: " );
-		playerB = scan.nextInt();
-		switch( playerB ) {
-		case 1:
-			System.out.println( "가위를 냈습니다." );
-			break;
-		case 2:
-			System.out.println( "바위를 냈습니다." );
-			break;
-		case 3:
-			System.out.println( "보를 냈습니다." );
-		}
+		System.out.print( "B군, 가위, 바위, 보 중 하나를 선택하세요: " );
+		playerB = scan.nextLine().trim();
+		System.out.println( playerB + "를 냈습니다." );
 		// 가위바위보 승패 출력
 		// 먼저 A양과 B군이 같으면 비김
-		if ( playerA == playerB ) {
+		if ( playerA.equals( playerB ) ) {
 			System.out.println( "\nA양과 B군이 비겼습니다." );
 		}
 		// A양이 가위이고 B군이 보를 낸 경우 A양 승리
-		else if ( ( playerA == 1 ) && ( playerB == 3 ) ) {
+		else if ( playerA.equals( "가위" ) && playerB.equals( "보" ) )	 {
 			System.out.println( "\nA양이 이겼습니다." );
 		}
 		// A양이 바위이고 B군이 가위를 낸 경우 A양 승리
-		else if ( ( playerA == 2 ) && ( playerB == 1 ) ) {
+		else if ( playerA.equals( "바위" ) && playerB.equals( "가위" ) ) {
 			System.out.println( "\nA양이 이겼습니다." );
 		}
 		// A양이 보이고 B군이 바위를 낸 경우 A양 승리
-		else if ( ( playerA == 3 ) && ( playerB == 2 ) ) {
+		else if ( playerA.equals( "보" ) && playerB.equals( "바위" ) ) {
 			System.out.println( "\nA양이 이겼습니다." );
 		}
 		// 나머지 경우 B군 승리
