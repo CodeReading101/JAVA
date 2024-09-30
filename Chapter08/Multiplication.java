@@ -12,7 +12,7 @@ public class Multiplication
 			for( column = 1; column <= 9; column++ ) {
 				System.out.printf("%d*%d=%2d  ", row, column, column*row );
 			}
-			System.out.println("");
+			System.out.println();
 		}
 	}
 }

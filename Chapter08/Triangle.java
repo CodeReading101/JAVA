@@ -21,7 +21,7 @@ public class Triangle
 				System.out.print( "*" );
 			}
 			// 끝에 빈줄을 출력
-			System.out.println( "" );
+			System.out.println();
 		}
 	}
 }

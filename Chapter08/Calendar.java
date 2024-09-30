@@ -29,7 +29,7 @@ public class Calendar
 			System.out.printf( "%5d", day );
 			// 즉, 토요일 후 일요일은 새 줄에서 시작
 			if ( ( dayOfWeek % 7 ) == saturday ) {
-				System.out.println( "" );
+				System.out.println();
 			}
 		}
 	}
