@@ -5,11 +5,10 @@
 public class Multiplication
 {
 	public static void main( String[] args ) {
-		int row = 0, column = 0;
 		// 구구단 한 줄씩 출력
-		for( row = 1; row <= 9; row++ ) {
+		for( int row = 1; row <= 9; row++ ) {
 			// 구구단 한 칸씩 출력
-			for( column = 1; column <= 9; column++ ) {
+			for( int column = 1; column <= 9; column++ ) {
 				System.out.printf("%d*%d=%2d  ", row, column, column*row );
 			}
 			System.out.println();

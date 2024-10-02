@@ -10,7 +10,7 @@ public class RockPaperScissors
 		do {
 			// 사용자가 가위바위보중 하나를 선택
 			System.out.print( "가위, 바위, 보 중 하나를 입력하세요: " );
-			player = scan.nextLine().trim();
+			player = scan.nextLine();
 		// 사용자가 가위바위보를 잘못 입력하면 다시 선택
 		} while( !player.equals("가위") && !player.equals("바위") && !player.equals("보") );
 		// 사용자가 선택한 결과를 출력

@@ -6,18 +6,18 @@ public class Triangle
 {
 	public static void main( String[] args ) {
 		Scanner scan = new Scanner( System.in );
-		int size = 0, line = 0, blank = 0, star = 0;
+		int size = 0;
 		// 사용자에게 삼각형의 크기를 입력 받기
 		System.out.print( "삼각형 크기를 입력하세요: " );
 		size = scan.nextInt();
 		// 삼각형 크기만큼 한 줄씩 출력
-		for ( line = 1; line <= size; line++ ) {
+		for ( int line = 1; line <= size; line++ ) {
 			// '삼각형 크기 - 줄번호'만큼 공백 ' '을 출력
-			for ( blank = size - line; blank > 0; blank-- ) {
+			for ( int blank = size - line; blank > 0; blank-- ) {
 				System.out.print( " " );
 			}
 			// '2 * 줄번호 - 1'만큼 별모양 '*'를 출력
-			for ( star = 2 * line - 1; star > 0; star-- ) {
+			for ( int star = 2 * line - 1; star > 0; star-- ) {
 				System.out.print( "*" );
 			}
 			// 끝에 빈줄을 출력
