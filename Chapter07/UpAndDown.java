@@ -7,15 +7,14 @@ public class UpAndDown
 {
 	public static void main( String[] args ) {
 		Scanner scan = new Scanner( System.in );
-		int number = 0, user = 0, chance = 6;
 		// 먼저 임의의 수 숨기기
-		number = (int)( Math.random() * 100 ) + 1;
+		int number = (int)( Math.random() * 100 ) + 1;
 		// 5번의 기회 내에서 임의의 수 맞추기
-		while( --chance > 0 ) {
-			System.out.println( "기회는 " + chance + "번 남았습니다" );
+		int chance = 5;
+		while( --chance >= 0 ) {
 			// 숫자 입력 받기
 			System.out.print( "1~100사이의 숫자를 입력하세요: " );
-			user = scan.nextInt();
+			int user = scan.nextInt();
 			// 입력값이 제한범위 벗어나면 다시 입력받기
 			if ( ( user < 1 ) || ( 100 < user ) ) {
 				System.out.println( "제한범위를 벗어났습니다" );
@@ -23,7 +22,7 @@ public class UpAndDown
 				continue;
 			}
 			// 비교 결과 출력
-			// 첫째 임의의 수를 맞추면 Sucess!! 출력 후 종료
+			// 첫째 임의의 수를 맞추면 Success!! 출력 후 종료
 			else if ( number == user ) {
 				System.out.println( "Success!!" );
 				break;
@@ -36,7 +35,7 @@ public class UpAndDown
 			else if ( number < user ) {
 				System.out.println( "Down!" );
 			}
+			System.out.println( "기회는 " + chance + "번 남았습니다" );
 		}
 	}
 }
-
