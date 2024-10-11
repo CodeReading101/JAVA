@@ -6,7 +6,7 @@ public class WordSort
 {
 	public static void main( String[] args ) {
 		Scanner scan = new Scanner( System.in );
-		String words[] = { "", "", "" };
+		String[] words = { "", "", "" };
 		// 단어들 입력
 		for ( int index = 0; index < words.length; index++ ) {
 			System.out.print( "단어를 입력하세요: " );
