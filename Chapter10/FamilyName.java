@@ -1,6 +1,6 @@
 // JAVA 프로그래밍 - https://codereading101.github.io/JAVA/
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter10/FamilyName.java
-
+import java.util.Scanner;
 
 public class FamilyName
 {
