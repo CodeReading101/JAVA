@@ -20,8 +20,7 @@ public class TV implements RemoteControl
 	 * TV 생성자로 TV 상태 초기화
 	 * @return 생성자이므로 해당사항 없음
 	 */
-	public TV()
-	{
+	public TV() {
 		this.power = OFF;
 		this.channel = 100;
 		this.volume = 10;
@@ -31,15 +30,12 @@ public class TV implements RemoteControl
 	 * TV 리모컨에서 전원버튼 눌렀을 때 전원을 켜거나 끄기
 	 * @return 전원 상태
 	 */
-	public String clickPower()
-	{
-		if( this.power == OFF )
-		{
+	public String clickPower() {
+		if( this.power == OFF ) {
 			this.power = ON;
 			return "TV 전원을 켭니다";
 		}
-		else
-		{
+		else {
 			this.power = OFF;
 			return "TV 전원을 끕니다";
 		}
@@ -49,8 +45,7 @@ public class TV implements RemoteControl
 	 * TV 리모컨에서 상(△) 버튼을 눌렀을 때 채널을 +1 이동
 	 * @return 채널 상태
 	 */
-	public String clickUp()
-	{
+	public String clickUp() {
 		return "현재 채널은 " + ( ++this.channel ) + "번입니다";
 	}
 
@@ -58,8 +53,7 @@ public class TV implements RemoteControl
 	 * TV 리모컨에서 하(▽) 버튼을 눌렀을 때 채널을 -1 이동
 	 * @return 채널 상태
 	 */
-	public String clickDown()
-	{
+	public String clickDown() {
 		return "현재 채널은 " + ( --this.channel ) + "번입니다";
 	}
 
@@ -67,8 +61,7 @@ public class TV implements RemoteControl
 	 * TV 리모컨에서 좌(◁) 버튼을 눌렀을 때 음량을 -1 이동
 	 * @return 음량 상태
 	 */
-	public String clickLeft()
-	{
+	public String clickLeft() {
 		return "현재 음량은 " + ( --this.volume ) + "입니다";
 	}
 
@@ -76,8 +69,7 @@ public class TV implements RemoteControl
 	 * TV 리모컨에서 우(▷) 버튼을 눌렀을 때 음량을 +1 이동
 	 * @return 음량 상태
 	 */
-	public String clickRight()
-	{
+	public String clickRight() {
 		return "현재 음량은 " + ( ++this.volume ) + "입니다";
 	}
 }
