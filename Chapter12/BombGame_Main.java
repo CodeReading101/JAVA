@@ -12,8 +12,7 @@ public class BombGame_Main
 		BombGame game = new BombGame();
 		do {
 			// 먼저 게임 현황 출력
-			System.out.println(
-			                    game );
+			System.out.println( game );
 			// 폭탄 숨기기
 			game.hide();
 			// 폭탄 찾기
