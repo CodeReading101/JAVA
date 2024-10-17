@@ -4,7 +4,8 @@
 import java.util.Scanner;
 import rpsGame.RockPaperScissors;
 
-public class RockPaperScissors_Main {
+public class RockPaperScissors_Main 
+{
 	public static void main(String[] args) {
 		// 가위바위보 초기화
 		RockPaperScissors playerA = new RockPaperScissors();
@@ -13,12 +14,8 @@ public class RockPaperScissors_Main {
 		// 가위바위보 선택
 		playerA.select( new Scanner( System.in ) );
 		playerB.select();
-		System.out.println( "A양은 " +
-		                                playerA
-		                                        + "를 냈습니다." );
-		System.out.println( "B군은 " +
-		                                playerB
-		                                        + "를 냈습니다." );
+		System.out.println( "A양은 " + playerA + "를 냈습니다." );
+		System.out.println( "B군은 " + playerB + "를 냈습니다." );
 
 		// 가위바위보 승패 출력
 		if ( playerA.equals( playerB ) )
@@ -27,7 +24,6 @@ public class RockPaperScissors_Main {
 			System.out.println( "A양이 이겼습니다" );
 		else
 			System.out.println( "B군이 이겼습니다" );
-
 	}
 }
 
