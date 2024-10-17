@@ -5,22 +5,19 @@ import java.util.Scanner;
 import find.BallGame;
 public class BallGame_Main
 {
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		// 초기화
 		Scanner scan = new Scanner( System.in );
 		BallGame game = new BallGame();
 		do {
 			// 먼저 게임 현황 출력
-			System.out.println(
-			                    game );
+			System.out.println( game );
 			// 공 숨기기
 			game.hide();
 			// 공 찾기
 			game.find( scan );
 			// 게임을 계속할지 확인
 		} while( game.isValid() );
-
 	}
 }
 
