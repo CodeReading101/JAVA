@@ -5,8 +5,7 @@ import java.util.Scanner;
 import remoteControl.TV;
 public class TV_Main
 {
-	public static void main( String[] args )
-	{
+	public static void main( String[] args ) {
 		// 변수 초기화
 		Scanner scan = new Scanner( System.in );
 		String result = "";
@@ -20,35 +19,29 @@ public class TV_Main
 			// 전원을 입력하면 전원을 켜거나 끄기
 			if ( result.equals( "전원" ) )
 			{
-				System.out.println(
-				                    tv.clickPower() );
+				System.out.println( tv.clickPower() );
 			}
 			// 상을 입력하면 채널을 +1 이동
 			else if ( result.equals( "상" ) )
 			{
-				System.out.println(
-				                    tv.clickUp() );
+				System.out.println( tv.clickUp() );
 			}
 			// 하를 입력하면 채널을 -1 이동
 			else if ( result.equals( "하" ) )
 			{
-				System.out.println(
-				                    tv.clickDown() );
+				System.out.println( tv.clickDown() );
 			}
 			// 좌를 입력하면 음량을 -1 이동
 			else if ( result.equals( "좌" ) )
 			{
-				System.out.println(
-				                    tv.clickLeft() );
+				System.out.println( tv.clickLeft() );
 			}
 			// 우를 입력하면 음량을 +1 이동
 			else if ( result.equals( "우" ) )
 			{
-				System.out.println(
-				                    tv.clickRight() );
+				System.out.println( tv.clickRight() );
 			}
 		} while( !result.equals( "종료" ) );
-		return;
 	}
 }
 
