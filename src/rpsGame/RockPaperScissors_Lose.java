@@ -10,8 +10,7 @@ public class RockPaperScissors_Lose extends RockPaperScissors {
 	}
 	// 가위바위보 승패를 바꾸는 메서드
 	public boolean win( int counterpart ) {
-		return !
-		        super.win( counterpart );
+		return !super.win( counterpart );
 	}
 }
 
