@@ -59,8 +59,7 @@ public class RockPaperScissors {
 
 	// 내가 상대편을 이겼는지 비교하는 메서드
 	public boolean win( RockPaperScissors counterpart ) {
-		return
-		       win( counterpart.toInteger() );
+		return win( counterpart.toInteger() );
 	}
 
 	public boolean win( int counterpart ) {
