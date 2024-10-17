@@ -18,8 +18,7 @@ public class RoboticVacuumCleaner implements RemoteControl
 	 * RoboticVacuumCleaner 생성자로 로봇청소기 상태 초기화
 	 * @return 생성자이므로 해당사항 없음
 	 */
-	public RoboticVacuumCleaner()
-	{
+	public RoboticVacuumCleaner() {
 		this.power = OFF;
 	}
 
@@ -27,8 +26,7 @@ public class RoboticVacuumCleaner implements RemoteControl
 	 * 로봇청소기 리모컨에서 전원버튼 눌렀을 때 전원을 켜거나 끄기
 	 * @return 전원 상태
 	 */
-	public String clickPower()
-	{
+	public String clickPower() {
 		if( this.power == OFF )
 		{
 			this.power = ON;
@@ -45,8 +43,7 @@ public class RoboticVacuumCleaner implements RemoteControl
 	 * 로봇청소기 리모컨에서 상(△) 버튼을 눌렀을 때 직진
 	 * @return 주행 상태
 	 */
-	public String clickUp()
-	{
+	public String clickUp() {
 		return "직진합니다";
 	}
 
@@ -54,8 +51,7 @@ public class RoboticVacuumCleaner implements RemoteControl
 	 * 로봇청소기 리모컨에서 하(▽) 버튼을 눌렀을 때 후진
 	 * @return 주행 상태
 	 */
-	public String clickDown()
-	{
+	public String clickDown() {
 		return "후진합니다";
 	}
 
@@ -63,8 +59,7 @@ public class RoboticVacuumCleaner implements RemoteControl
 	 * 로봇청소기 리모컨에서 좌(◁) 버튼을 눌렀을 때 좌회전
 	 * @return 주행 상태
 	 */
-	public String clickLeft()
-	{
+	public String clickLeft() {
 		return "좌회전합니다";
 	}
 
@@ -72,8 +67,7 @@ public class RoboticVacuumCleaner implements RemoteControl
 	 * 로봇청소기 리모컨에서 우(▷) 버튼을 눌렀을 때 우회전
 	 * @return 주행 상태
 	 */
-	public String clickRight()
-	{
+	public String clickRight() {
 		return "우회전합니다";
 	}
 }
