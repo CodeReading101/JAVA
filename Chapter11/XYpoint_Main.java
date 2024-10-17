@@ -27,7 +27,9 @@ class XYpoint {
 		return Math.sqrt( Math.pow( ( this.x - that.x ), 2 ) + Math.pow( ( this.y - that.y ), 2 ) );
 	}
 }
-public class XYpoint_Main {
+
+public class XYpoint_Main 
+{
 	public static void main( String[] args ) {
 		// 먼저 점의 좌표값 입력
 		Scanner scan = new Scanner( System.in );
@@ -43,10 +45,7 @@ public class XYpoint_Main {
 			System.out.println( "이 점은 원점입니다" );
 		}
 		else {
-			System.out.println(
-			                    origin + "과 "
-			                     + point + " 사이의 거리는 "
-			                     + point.compareTo( origin ) + "입니다" );
+			System.out.println( origin + "과 " + point + " 사이의 거리는 " + point.compareTo( origin ) + "입니다" );
 		}
 	}
 }
