@@ -35,8 +35,7 @@ public class BallGame
 
 	// 게임 진행이 유효한지 확인하는 메서드
 	public boolean isValid() {
-		if ( ( 1 <= this.ball ) && ( this.ball <= 3 )
-		     &&  ( 1 <= this.cup ) && ( this.cup <= 3 ) )
+		if ( ( 1 <= this.ball ) && ( this.ball <= 3 ) &&  ( 1 <= this.cup ) && ( this.cup <= 3 ) )
 			return true;
 		else
 			return false;
@@ -64,7 +63,7 @@ public class BallGame
 	private String blanks( int column ) {
 		String result = "";
 		for ( int i = 1; i < column; i++ )
-				result += "       ";
+			result += "       ";
 		return result;
 	}
 }
