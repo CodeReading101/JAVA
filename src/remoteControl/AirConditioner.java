@@ -10,6 +10,7 @@ import java.util.Scanner;
  *
  */
 public class AirConditioner implements RemoteControl
+
 {
 	// 에어컨 전원, 온도, 풍량 변수
 	private boolean power;
@@ -35,7 +36,7 @@ public class AirConditioner implements RemoteControl
 			this.power = ON;
 			return "에어컨 전원을 켭니다";
 		}
-		else {
+		else  {
 			this.power = OFF;
 			return "에어컨 전원을 끕니다";
 		}

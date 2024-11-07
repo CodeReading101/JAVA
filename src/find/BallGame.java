@@ -13,7 +13,7 @@ public class BallGame
 	private int ball;
 	private int cup;
 
-	// 공 찾기 게임 생성자
+	// 공 찾기 게임 초기화
 	public BallGame() {
 		this.message = "1, 2, 3 중에서 공[O]을 숨긴 컵을 찾으세요: ";
 		this.meet   = "찾았다!\n";
@@ -22,26 +22,27 @@ public class BallGame
 		this.cup = 0;
 	}
 
-	// 공 숨기기 메서드
+	// 공 숨기기
 	public void hide() {
 		this.ball = (int)( Math.random() * 3 ) + 1;
 	}
 
-	// 공 찾기 메서드
+	// 공 찾기
 	public void find( Scanner scan ) {
 		System.out.print( message );
 		this.cup = scan.nextInt();
 	}
 
-	// 게임 진행이 유효한지 확인하는 메서드
+	// 게임 진행이 유효한지 확인
 	public boolean isValid() {
-		if ( ( 1 <= this.ball ) && ( this.ball <= 3 ) &&  ( 1 <= this.cup ) && ( this.cup <= 3 ) )
+		if ( ( 1 <= this.ball ) && ( this.ball <= 3 )
+		     &&  ( 1 <= this.cup ) && ( this.cup <= 3 ) )
 			return true;
 		else
 			return false;
 	}
 
-	// 공 찾기 결과를 문자열로 나타내는 메서드
+	// 공 찾기 결과를 문자열로 표현
 	public String toString() {
 		String result = "  ___    ___    ___  \n"
 		              + " |   |  |   |  |   | \n"
@@ -51,15 +52,13 @@ public class BallGame
 			result += blanks( ball );
 			result += "   O   \n";
 			result += blanks( cup );
-			if ( ( this.cup == this.ball ) )
-				result += meet;
-			else
-				result += dodge;
+			result += ( this.cup == this.ball ) ? meet : dodge;
 		}
+
 		return result;
 	}
 
-	// 공백을 확보하는 메서드
+	// 공백 확보
 	private String blanks( int column ) {
 		String result = "";
 		for ( int i = 1; i < column; i++ )

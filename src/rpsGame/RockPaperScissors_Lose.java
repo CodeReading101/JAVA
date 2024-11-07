@@ -4,13 +4,14 @@
 package rpsGame;
 // 지는 가위바위보 클래스
 public class RockPaperScissors_Lose extends RockPaperScissors {
-	// 지는 가위바위보 생성자
+	// 지는 가위바위보 초기화
 	public RockPaperScissors_Lose() {
 		super();
 	}
-	// 가위바위보 승패를 바꾸는 메서드
+	// 가위바위보 승패를 반대로 변경
 	public boolean win( int counterpart ) {
-		return !super.win( counterpart );
+		return !
+		        super.win( counterpart );
 	}
 }
 

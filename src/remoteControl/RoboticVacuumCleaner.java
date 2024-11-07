@@ -27,13 +27,11 @@ public class RoboticVacuumCleaner implements RemoteControl
 	 * @return 전원 상태
 	 */
 	public String clickPower() {
-		if( this.power == OFF )
-		{
+		if( this.power == OFF ) {
 			this.power = ON;
 			return "로봇청소기 전원을 켭니다";
 		}
-		else
-		{
+		else {
 			this.power = OFF;
 			return "로봇청소기 전원을 끕니다";
 		}

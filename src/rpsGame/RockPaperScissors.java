@@ -5,12 +5,13 @@ package rpsGame;
 import java.util.Scanner;
 
 // 가위바위보 클래스
-public class RockPaperScissors {
+public class RockPaperScissors
+{
 	private int player;
 	private final int SCISSORS = 0;
 	private final int ROCK = 1;
 	private final int PAPER = 2;
-	// 가위바위보 생성자
+	// 가위바위보 초기화
 	public RockPaperScissors() {
 		this.player = SCISSORS;
 	}
@@ -37,7 +38,7 @@ public class RockPaperScissors {
 		this.player = (int)( Math.random() * 3 );
 	}
 
-	// 가위바위보를 문자열로 표현하는 메서드
+	// 가위바위보를 문자열로 표현
 	public String toString() {
 		if ( this.player == SCISSORS )
 			return "가위";
@@ -47,19 +48,20 @@ public class RockPaperScissors {
 			return "보";
 	}
 
-	// 가위바위보를 숫자로 표현하는 메서드
+	// 가위바위보를 숫자로 표현
 	public int toInteger() {
 		return this.player;
 	}
 
-	// 나와 상대편의 가위바위보가 같은지 비교하는 메서드
+	// 나와 상대편의 가위바위보가 같은지 비교
 	public boolean equals( RockPaperScissors counterpart ) {
 		return this.player == counterpart.toInteger();
 	}
 
-	// 내가 상대편을 이겼는지 비교하는 메서드
+	// 내가 상대편을 이겼는지 비교
 	public boolean win( RockPaperScissors counterpart ) {
-		return win( counterpart.toInteger() );
+		return
+		       win( counterpart.toInteger() );
 	}
 
 	public boolean win( int counterpart ) {
