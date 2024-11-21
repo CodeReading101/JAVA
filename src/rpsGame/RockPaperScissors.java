@@ -3,7 +3,6 @@
 
 package rpsGame;
 import java.util.Scanner;
-
 // 가위바위보 클래스
 public class RockPaperScissors
 {
@@ -15,8 +14,6 @@ public class RockPaperScissors
 	public RockPaperScissors() {
 		this.player = SCISSORS;
 	}
-
-	// 가위바위보 선택: 키보드 입력
 	public void select( Scanner scan ) {
 		String input = "";
 		do {
@@ -24,7 +21,6 @@ public class RockPaperScissors
 			input = scan.next();
 		} while( !input.equals( "가위" ) && !input.equals( "바위" ) && !input.equals( "보" ) );
 		scan.close();
-
 		if ( input.equals( "가위" ) )
 			this.player = SCISSORS;
 		else if ( input.equals( "바위" ) )
@@ -32,12 +28,10 @@ public class RockPaperScissors
 		else
 			this.player = PAPER;
 	}
-
 	// 가위바위보 선택: 임의값
 	public void select() {
 		this.player = (int)( Math.random() * 3 );
 	}
-
 	// 가위바위보를 문자열로 표현
 	public String toString() {
 		if ( this.player == SCISSORS )
@@ -47,23 +41,19 @@ public class RockPaperScissors
 		else
 			return "보";
 	}
-
 	// 가위바위보를 숫자로 표현
 	public int toInteger() {
 		return this.player;
 	}
-
 	// 나와 상대편의 가위바위보가 같은지 비교
 	public boolean equals( RockPaperScissors counterpart ) {
 		return this.player == counterpart.toInteger();
 	}
-
 	// 내가 상대편을 이겼는지 비교
 	public boolean win( RockPaperScissors counterpart ) {
 		return
 		       win( counterpart.toInteger() );
 	}
-
 	public boolean win( int counterpart ) {
 		if ( ( ( this.player == SCISSORS ) && ( counterpart == PAPER ) )
 				|| ( ( this.player == PAPER ) && ( counterpart == ROCK ) )

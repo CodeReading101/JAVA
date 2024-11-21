@@ -48,7 +48,7 @@ public class RemoteControllerPanel extends JPanel implements ActionListener
 	 * 가전제품을 제어하는 리모컨 GUI 초기화
 	 * @param appliance 가전제품 : TV, 에어콘, 로봇청소기
 	 */
-	public RemoteControllerPanel( RemoteControl appliance, final String imgPath )
+	public RemoteControllerPanel( String imgPath, RemoteControl appliance )
 	{
 		this( imgPath );
 		this.appliance = appliance;
@@ -57,7 +57,7 @@ public class RemoteControllerPanel extends JPanel implements ActionListener
 	/**
 	 * 리모컨 GUI 초기화
 	 */
-	public RemoteControllerPanel( final String imgPath )
+	public RemoteControllerPanel( String imgPath )
 	{
 		this.appliance = null;
 

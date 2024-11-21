@@ -73,7 +73,6 @@ public class BallGamePanel extends JPanel implements ActionListener
 		this.add( cup[0] );
 		this.add( cup[1] );
 		this.add( cup[2] );
-		// 화면 아래쪽에 컵 3개 입력 버튼 초기화
 		button = new JButton[3];
 		button[0] = new JButton( "                          1                           " );
 		button[0].addActionListener( this );
