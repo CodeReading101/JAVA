@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Direction
 {
 	// 열거형으로 방향키 목록 정의
-	enum Direction { LEFT, left, RIGHT, right, UP, up, DOWN, down };
+	enum Direction2 { LEFT, left, RIGHT, right, UP, up, DOWN, down };
 	public static void main( String[] args ) {
 		Scanner scan = new Scanner( System.in );
 		// 캐릭터의 초기 위치를 출력
@@ -14,7 +14,7 @@ public class Direction
 		System.out.println( "      -> \n" );
 		// 이동 방향 입력 받기
 		System.out.print("left, right, up, down을 입력하세요:");
-		Direction move = Direction.valueOf( scan.next() );
+		Direction2 move = Direction2.valueOf( scan.next() );
 		// 이동 결과 출력
 		System.out.print( "\033[2;6f  " );
 		switch( move ) {
