@@ -6,17 +6,14 @@ public class TaxiFare
 {
 	public static void main( String[] args ) {
 		Scanner scan = new Scanner( System.in );
-		int distance = 0, taxiFare = 0;
-		
 		// 사용자에게 이동거리를 입력받기
-		System.out.print( "택시의 이동거리(m)를 입력하세요: " );
-		distance = scan.nextInt();
-		
+		System.out.print( "택시의 이동거리(m)를 입력하세요(1600이상): " );
+		int distance = scan.nextInt();
 		// 택시요금은 1.6km까지 기본료가 4800원이고 131m 당 100원 부과
-		taxiFare = 4800 + ( distance - 1600 + 130 ) / 131 * 100;
-		
+		int taxiFare = 4800 + ( distance - 1600 + 130 ) / 131 * 100;
 		// 택시요금 출력
 		System.out.print( distance + "m 이동시 택시요금은 " + taxiFare + "원입니다 " );
+		scan.close();
 	}
 }
 

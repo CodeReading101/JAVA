@@ -7,11 +7,11 @@ public class Heart
 	public static void main( String[] args ) {
 		// 하트 모양을 출력
 		System.out.print( "\033[31m" );
-		System.out.println( " d00b d00b " );
-		System.out.println( " 0000V0000 " );
-		System.out.println( "  0000000  " );
-		System.out.println( "    000    " );
-		System.out.println( "     V     " );
+		System.out.println( " d0b d0b " );
+		System.out.println( " 000V000 " );
+		System.out.println( "  00000  " );
+		System.out.println( "   000   " );
+		System.out.println( "    V    " );
 	}
 }
 

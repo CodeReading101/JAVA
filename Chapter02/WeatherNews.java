@@ -5,53 +5,48 @@ import java.util.Scanner;
 public class WeatherNews
 {
 	public static void main( String[] args ) {
-		// 변수 초기화
 		Scanner scan = new Scanner( System.in );
-		int  month = 0, day = 0;
-		String week = "", weatherReport = "", precaution = "";
-		int  lowSeoul = 0, lowChuncheon = 0, lowDaejeon = 0, lowGwangju = 0, lowBusan = 0, lowJeju = 0;
-		int  highSeoul = 0, highChuncheon = 0, highDaejeon = 0, highGwangju = 0, highBusan = 0, highJeju = 0;
 		// 주요 날씨 내용을 입력
 		System.out.print( "오늘의 기상특보는 무엇인가요: " );
-		weatherReport = scan.nextLine().trim();
+		String weatherReport = scan.next();
 		System.out.print( "오늘의 주의사항은 무엇인가요: " );
-		precaution = scan.nextLine().trim();
+		String precaution = scan.next();
 		System.out.print( "오늘은 무슨 요일인가요: " );
-		week = scan.nextLine().trim();
+		String week = scan.next();
 		System.out.print( "오늘은 몇 월인가요: " );
-		month = scan.nextInt();
-		System.out.print( "오늘은 몇 일인가요: " );
-		day = scan.nextInt();
+		int month = scan.nextInt();
+		System.out.print( "오늘은 며칠인가요: " );
+		int day = scan.nextInt();
 		System.out.print( "서울 최저기온은 몇 도인가요: " );
-		lowSeoul = scan.nextInt();
+		int lowSeoul = scan.nextInt();
 		System.out.print( "춘천 최저기온은 몇 도인가요: " );
-		lowChuncheon = scan.nextInt();
+		int lowChuncheon = scan.nextInt();
 		System.out.print( "대전 최저기온은 몇 도인가요: " );
-		lowDaejeon = scan.nextInt();
+		int lowDaejeon = scan.nextInt();
 		System.out.print( "광주 최저기온은 몇 도인가요: " );
-		lowGwangju = scan.nextInt();
+		int lowGwangju = scan.nextInt();
 		System.out.print( "부산 최저기온은 몇 도인가요: " );
-		lowBusan = scan.nextInt();
+		int lowBusan = scan.nextInt();
 		System.out.print( "제주 최저기온은 몇 도인가요: " );
-		lowJeju = scan.nextInt();
+		int lowJeju = scan.nextInt();
 		System.out.print( "서울 최고기온은 몇 도인가요: " );
-		highSeoul = scan.nextInt();
+		int highSeoul = scan.nextInt();
 		System.out.print( "춘천 최고기온은 몇 도인가요: " );
-		highChuncheon = scan.nextInt();
+		int highChuncheon = scan.nextInt();
 		System.out.print( "대전 최고기온은 몇 도인가요: " );
-		highDaejeon = scan.nextInt();
+		int highDaejeon = scan.nextInt();
 		System.out.print( "광주 최고기온은 몇 도인가요: " );
-		highGwangju = scan.nextInt();
+		int highGwangju = scan.nextInt();
 		System.out.print( "부산 최고기온은 몇 도인가요: " );
-		highBusan = scan.nextInt();
+		int highBusan = scan.nextInt();
 		System.out.print( "제주 최고기온은 몇 도인가요: " );
-		highJeju = scan.nextInt();
+		int highJeju = scan.nextInt();
 		// 날씨 정보를 바탕으로 기상 뉴스를 자동으로 생성
-		System.out.println( month + "월 " + day + "일 " + week + "요일, 아침 날씨입니다." );
-		System.out.println( "아침 최저기온은 서울 " + lowSeoul + "도, 춘천 " + lowChuncheon + "도, 대전 " + lowDaejeon + "도, 광주 " + lowGwangju + "도, 부산 " + lowBusan + "도, 제주 " + lowJeju + "도로 예상됩니다." );
-		System.out.println( "낮 최고기온은 서울 " + highSeoul + "도, 춘천 " + highChuncheon + "도, 대전 " + highDaejeon + "도, 광주 " + highGwangju + "도, 부산 " + highBusan + "도, 제주 " + highJeju + "도로 예상됩니다." );
-		System.out.println( "일부 지방에 " + weatherReport + "가 발효중입니다. 출근길 " + precaution + " 운전에 유의해야 합니다." );
-		System.out.print( "이상 날씨였습니다." );
+		System.out.println( month + "월 " + day + "일 " + week + "요일 오늘의 날씨입니다. " );
+		System.out.println( "주요 지역의 아침 최저 기온은 서울 " + lowSeoul + "도, 춘천 " + lowChuncheon + "도, 대전 " + lowDaejeon + "도, 광주 " + lowGwangju + "도, 부산 " + lowBusan + "도, 제주 " + lowJeju + "도입니다. " );
+		System.out.println( "낮 최고기온은 서울 " + highSeoul + "도, 춘천 " + highChuncheon + "도, 대전 " + highDaejeon + "도, 광주 " + highGwangju + "도, 부산 " + highBusan + "도, 제주 " + highJeju + "도입니다. " );
+		System.out.println( weatherReport + "가 발효중인 지역에서는 " + precaution + " 운전에 각별히 주의해 주시기 바랍니다. " );
+		scan.close();
 	}
 }
 

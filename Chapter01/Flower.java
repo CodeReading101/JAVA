@@ -5,8 +5,9 @@
 public class Flower
 {
 	public static void main( String[] args ) {
-		// 분홍 꽃 모양을 출력
-		System.out.println( "\033[31m\033[01m    _   " );
+		// 빨강 꽃 모양을 출력
+		System.out.print( "\033[31m\033[01m " );
+		System.out.println( "    _   " );
 		System.out.println( "  /\\ /\\ " );
 		System.out.println( " ( -O- )" );
 		System.out.println( "  \\/_\\/ " );
