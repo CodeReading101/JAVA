@@ -12,7 +12,7 @@ public class LowercaseToUppercase
 		// 알파벳 소문자를 대문자로 변환하기
 		char uppercase = (char)( (int) lowercase - (int) 'a' + (int) 'A' );
 		// 입력값 출력하기
-		System.out.println( "소문자 " + lowercase + "의 대문자는 " + uppercase + "입니다^^" );
+		System.out.print( "소문자 " + lowercase + "의 대문자는 " + uppercase + "입니다^^" );
 		scan.close();
 	}
 }

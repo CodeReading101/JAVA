@@ -16,7 +16,7 @@ public class FindBall
 		int cup = scan.nextInt();
 		// 공 찾기 결과 출력
 		System.out.print( "\033[4;" + (ball*7-3) + "fO\n\033[5;" + (cup*7-5) + "f" );
-		System.out.println( ( cup == ball ) ? "찾았다!" : "놓쳤다!" );
+		System.out.print( ( cup == ball ) ? "찾았다!" : "놓쳤다!" );
 		scan.close();
 	}
 }

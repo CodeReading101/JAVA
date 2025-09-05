@@ -12,7 +12,7 @@ public class FlipCoin
 		System.out.print( "동전의 앞면(1), 뒤면(2) 중 하나를 선택하세요: " );
 		int user = scan.nextInt();
 		// 사용자가 맞추었는지 결과 출력
-		System.out.println( ( coin == user ) ? "맞았습니다" : "틀렸습니다" );
+		System.out.print( ( coin == user ) ? "맞았습니다" : "틀렸습니다" );
 		scan.close();
 	}
 }
