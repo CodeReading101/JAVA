@@ -10,7 +10,7 @@ public class Operators
 		System.out.println( " 5 - 3 = " + ( 5 - 3 ) );
 		System.out.println( " 2 * 3 = " + ( 2 * 3 ) );
 		System.out.println( "10 / 3 = " + (10 / 3 ) );
-		System.out.println( "10 %% 3 = " + (10 % 3 ) + "\n" );
+		System.out.println( "10 % 3 = " + (10 % 3 ) + "\n" );
 		// 비교연산자 실습 및 출력: 1(참), 0(거짓)
 		System.out.println( "5 == 5 = " + ( 5 == 5 ) + ",   3 == 7 = " + ( 3 == 7 ) );
 		System.out.println( "9 != 2 = " + ( 9 != 2 ) + ",   8 != 8 = " + ( 8 != 8 ) );
