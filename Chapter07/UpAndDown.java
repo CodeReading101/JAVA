@@ -36,7 +36,7 @@ public class UpAndDown
 			}
 			System.out.println( "기회는 " + chance + "번 남았습니다" );
 		}
-			System.out.println( "정답은 " + number + "입니다" );
+		System.out.println( "정답은 " + number + "입니다" );
 		scan.close();
 	}
 }
