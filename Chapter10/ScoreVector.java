@@ -19,8 +19,8 @@ public class ScoreVector {
 		// 점수 정렬
 		Collections.sort( scores );
 		// 점수 출력
-		for( int i = 0; i < scores.size(); i++ )
-			System.out.print( scores.get(i) + " "  );
+		for( Integer score : scores )
+			System.out.print( score + " "  );
 		scan.close();
 	}
 }
