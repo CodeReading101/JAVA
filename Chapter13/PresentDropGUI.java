@@ -73,12 +73,13 @@ public class PresentDropGUI
 	{
 		final String background = "C:\\Users\\user\\Downloads\\JAVA-main\\Chapter13\\image\\background.jpg";
 		// 틀에 판을 끼우고 실행 준비 완료
-		JFrame frame = new JFrame ( "산타 선물 배달" );
+		JFrame frame = new JFrame ( "선물 배달" );
 		frame.getContentPane().add( new PresentDrop( background ) );
 		frame.pack();
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 	}
 }
+
 
 
