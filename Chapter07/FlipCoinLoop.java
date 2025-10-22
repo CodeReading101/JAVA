@@ -11,8 +11,8 @@ public class FlipCoinLoop
 			// 동전 던지기 게임
 			// 먼저 동전을 임의로 던져서 받고 숨기기
 			int coin = (int)( Math.random() * 2 ) + 1;
-			// 사용자는 동전의 앞면과 뒤면 중 하나를 선택
-			System.out.print( "동전의 앞면(1), 뒤면(2) 중 하나를 선택하세요: " );
+			// 사용자는 동전의 앞면과 뒷면 중 하나를 선택
+			System.out.print( "동전의 앞면(1), 뒷면(2) 중 하나를 선택하세요: " );
 			int user = Integer.parseInt( scan.nextLine() );
 			// 사용자가 동전의 상태를 맞추었는지 결과 출력
 			System.out.println(  ( coin == user ) ? "맞았습니다" : "틀렸습니다" );
