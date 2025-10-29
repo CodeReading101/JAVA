@@ -39,8 +39,8 @@ public class BombDodgePanel extends ViewPanel
 		updateHP();
 	}
 
+	// 캐릭터와 폭탄이 충돌하면 캐릭터 HP 감소
 	protected void updateHP() {
-		// 캐릭터와 폭탄이 충돌하면 캐릭터 HP 감소
 		for ( int i = 0; i < bombs.size(); i++ ) {
 			CollidableObject bomb = bombs.get(i);
 			if ( ( bomb.collide( character ) == true ) ) {

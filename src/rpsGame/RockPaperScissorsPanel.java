@@ -67,9 +67,9 @@ public class RockPaperScissorsPanel extends JPanel implements ActionListener
 	// 가위바위보 내기
 	@Override
 	public void actionPerformed( ActionEvent event ) {
+		// 승패 결과 제시
 		int playerA = select( event );
-		int playerB = (int)(Math.random()*3);
-		// 승패 결과
+		int playerB = (int)( Math.random() * 3 );
 		show( playerA, playerB );
 		// 다음 판은 잠시 대기
 		timer.start();

@@ -5,7 +5,7 @@ package move;
 // 충돌가능한 객체
 public class CollidableObject extends ObjectByKey
 {
-	// 캐릭터 초기화 : 이미지, 현재 위치, 이동 허용 범위를 설정
+	// 초기화: 이미지, 현재 위치, 이동 허용 범위를 설정
 	public CollidableObject( final String image, int x, int y, int width, int height ) {
 		super( image, x, y, 0, 20, width, height );
 	}
@@ -22,17 +22,17 @@ public class CollidableObject extends ObjectByKey
 			this.y = 40 + (int)( Math.random() * ( this.maxY-40 ) );
 		}
 	}
-	// 일정 속도 위치 이동
+	// 일정 속도로 위치 이동
 	public void move( int directionX, int directionY ) {
 		final int SPEED = 20;
 		super.move( directionX * SPEED, directionY * SPEED );
 	}
-	// 이동 허용 범위를 벗어나거나 다른 객체와 충돌하는지 여부 확인
-	public boolean collide() {
-		return ( this.x < minX ) || ( maxX < this.x ) || ( this.y < minY ) || ( maxY < this.y );
-	}
+	// 다른 객체와 충돌하거나 이동 허용 범위를 벗어나는지 여부 확인
 	public boolean collide( ObjectByKey that ) {
 		return ( Math.abs( this.x - that.x ) < IMGSIZE ) && ( Math.abs( this.y - that.y ) < IMGSIZE );
+	}
+	public boolean collide() {
+		return ( this.x < minX ) || ( maxX < this.x ) || ( this.y < minY ) || ( maxY < this.y );
 	}
 }
 

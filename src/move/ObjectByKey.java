@@ -13,8 +13,9 @@ public class ObjectByKey extends KeyAdapter
 	private Image image;
 	protected int x, y, directionX, directionY;
 	protected int minX, minY, maxX, maxY;
-	public static final int UP = -1, DOWN = 1, LEFT = -1, RIGHT = 1, STOP = 0, IMGSIZE = 40;
+	public static final int LEFT = -1, RIGHT = 1, UP = -1, DOWN = 1, STOP = 0, IMGSIZE = 40;
 
+	// 초기화: 이미지, 현재 위치, 이동 허용 범위, 이동 방향을 설정
 	public ObjectByKey( String image, int x, int y, int minX, int minY, int maxX, int maxY ) {
 		this.image = new ImageIcon( image ).getImage();
 		this.x = x;
@@ -27,7 +28,7 @@ public class ObjectByKey extends KeyAdapter
 		this.directionY = STOP;
 	}
 
-	// 키를 입력하면 상하좌우 이동방향 설정
+	// 키를 누르면 상하좌우 이동방향 설정
 	public void keyPressed( KeyEvent event ) {
 		switch( event.getKeyCode() ) {
 		case KeyEvent.VK_ESCAPE:
@@ -48,7 +49,7 @@ public class ObjectByKey extends KeyAdapter
 		}
 	}
 
-	// 키를 해제하면 이동 멈춤 설정
+	// 키를 해제하면 이동방향 해제
 	public void keyReleased( KeyEvent event ) {
 		switch( event.getKeyCode() ) {
 		case KeyEvent.VK_LEFT: case 'A': case 'a':

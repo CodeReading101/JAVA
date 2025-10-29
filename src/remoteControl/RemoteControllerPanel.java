@@ -11,14 +11,14 @@ public class RemoteControllerPanel extends JPanel implements ActionListener
 {
 	protected JButton[] button;
 	public final static int POWER = 0, UP = 1, DOWN = 2, LEFT = 3, RIGHT = 4;
-	// 리모컨으로 제어하는 가전제품 : TV, 에어콘, 로봇청소기
+	// 리모컨으로 제어할 수 있는 가전제품 : TV, 에어컨, 로봇청소기
 	protected RemoteControl appliance;
 
 	// 리모컨 GUI 초기화
 	public RemoteControllerPanel( String imgPath ) {
 		this.appliance = null;
 
-		// 전원, 상, 하, 좌, 우 버튼의 이미지 및 리스너 초기화
+		// 리모컨 버튼의 이미지 및 리스너 초기화
 		final String[] strButton = { "power.gif", "up.gif", "down.gif", "left.gif", "right.gif" };
 		button = new JButton[strButton.length];
 		for ( int i = 0; i < strButton.length; i++ ) {
