@@ -7,7 +7,7 @@ import javax.swing.*;
 public class FindKeyGameMain
 {
 	public static void main(String args[]) {
-		// 질문 구성 : 질문번호, 질문, 선택항목1, 선택항목2, 선택항목2 클릭시 다음 질문번호
+		// 질문 준비 : 질문번호, 질문, 선택항목1, 선택항목2, 선택항목2 클릭시 다음 질문번호
 		String[][] questions = {
 				{ "1", "열쇠를 찾아라!", "시작" },
 				{ "2", "<html>약속이 있어서 나가야 하는데 차 키가 없다<br>열쇠는 어디에 있을까?<br>&nbsp;</html>", "문 밖으로 나간다", "여기서 찾아본다", "4" },

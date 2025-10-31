@@ -32,6 +32,7 @@ public class CardMatchingPanel extends JPanel {
 
 	// 카드 클릭
 	private class ClickListener implements ActionListener {
+		@Override
 		public void actionPerformed( ActionEvent event ) {
 			// 기존 두 장의 카드 색이 같으면 선택 유지하고, 다르면 선택 해제
 			if ( ( card1 != null ) && ( card2 != null ) ) {

@@ -13,7 +13,7 @@ public class BombDodgeGameMain
 		final int HEIGHT= 600;
 
 		// 판을 틀에 끼우고 실행 준비 완료
-		BombDodgePanel panel = new BombDodgePanel( new CollidableObject( imagePath+"character.png", WIDTH/2, HEIGHT-40, WIDTH, HEIGHT ), imagePath+"bomb.png" );
+		BombDodgePanel panel = new BombDodgePanel( new CollidableObject( imagePath+"character.png", WIDTH/2, HEIGHT-CollidableObject.IMGSIZE, WIDTH, HEIGHT ), imagePath+"bomb.png" );
 		JFrame frame = new JFrame ( "폭탄 피하기 게임" );
 		frame.getContentPane().add( panel );
 		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );

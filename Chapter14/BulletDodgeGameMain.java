@@ -13,7 +13,7 @@ public class BulletDodgeGameMain
 		final int HEIGHT= 300;
 
 		// 판을 틀에 끼우고 실행 준비 완료
-		BulletDodgePanel panel = new BulletDodgePanel( new CollidableObject( imagePath+"character.png", WIDTH-40, HEIGHT/2, WIDTH, HEIGHT ), imagePath+"bullet.png" );
+		BulletDodgePanel panel = new BulletDodgePanel( new CollidableObject( imagePath+"character.png", WIDTH-CollidableObject.IMGSIZE, HEIGHT/2, WIDTH, HEIGHT ), imagePath+"bullet.png" );
 		JFrame frame = new JFrame ( "총알 피하기 게임" );
 		frame.getContentPane().add( panel );
 		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );

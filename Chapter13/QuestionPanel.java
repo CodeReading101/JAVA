@@ -18,6 +18,7 @@ public class QuestionPanel extends JPanel
 		JLabel label = new JLabel( question[1] );
 		label.setFont( new Font( "굴림", Font.BOLD, 17 ) );
 		add( label );
+		// 선택항목1 제시
 		ClickListener click = new ClickListener();
 		if( ( question.length > 2 ) && ( question[2] != null ) && !question[2].equals("") ) {
 			option1 = new JRadioButton( question[2] );
@@ -25,6 +26,7 @@ public class QuestionPanel extends JPanel
 			option1.addActionListener( click );
 			add( option1 );
 		}
+		// 선택항목2 제시
 		if( ( question.length > 4 ) && ( question[3] != null ) && !question[3].equals("") ) {
 			option2 = new JRadioButton( question[3] );
 			option2.setFont( new Font( "굴림", Font.BOLD, 17 ) );
@@ -38,6 +40,7 @@ public class QuestionPanel extends JPanel
 	}
 	// 항목 선택시 다음 질문으로 이동
 	private class ClickListener implements ActionListener {
+		@Override
 		public void actionPerformed( ActionEvent event ) {
 			if ( ( event.getSource() == option1 ) && ( option1.getText().equals( "처음으로" ) ) ) {
 				option1.setSelected( false );

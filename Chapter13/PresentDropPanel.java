@@ -17,14 +17,14 @@ public class PresentDropPanel extends JPanel {
 		setFocusable( true );
 		requestFocus();
 
-		// 마우스 클릭시 선물 생성
+		// 마우스를 클릭할 때마다 선물 생성
 		this.addMouseListener( new MouseAdapter() {
 			@Override
 			public void mouseClicked( MouseEvent event ) {
 				presents.add( new Present( event.getX(), event.getY() ) );
 			}
 		} );
-		// 선물은 주기적으로 조금씩 낙하
+		// 각 선물은 주기적으로 조금씩 낙하
 		Timer timer = new Timer( 50, new ActionListener() {
 			@Override
 			public void actionPerformed( ActionEvent event ) {
