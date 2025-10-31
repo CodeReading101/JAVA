@@ -29,6 +29,7 @@ public class ObjectByKey extends KeyAdapter
 	}
 
 	// 키를 누르면 상하좌우 이동방향 설정
+	@Override
 	public void keyPressed( KeyEvent event ) {
 		switch( event.getKeyCode() ) {
 		case KeyEvent.VK_ESCAPE:
@@ -50,6 +51,7 @@ public class ObjectByKey extends KeyAdapter
 	}
 
 	// 키를 해제하면 이동방향 해제
+	@Override
 	public void keyReleased( KeyEvent event ) {
 		switch( event.getKeyCode() ) {
 		case KeyEvent.VK_LEFT: case 'A': case 'a':

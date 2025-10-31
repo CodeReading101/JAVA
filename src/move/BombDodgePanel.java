@@ -22,19 +22,20 @@ public class BombDodgePanel extends ViewPanel
 		this.height= character.backgroundHeight();
 		this.time = 300;
 		setBackground( Color.white );
-		setPreferredSize( new Dimension( width+40, height ) );
+		setPreferredSize( new Dimension( width + CollidableObject.IMGSIZE, height ) );
 	}
 
 	// 최신 정보 업데이트
+	@Override
 	protected void update() {
-		// 모든 폭탄은 아래로 떨어지며, 일정 시간마다 새 폭탄을 투하
+		// 모든 폭탄은 아래로 떨어지며, 주기적으로 새 폭탄을 투하
 		for ( CollidableObject bomb : bombs )
 			bomb.move();
 		if ( ( ( time-- ) % 8 ) == 0 ) {
 			bombs.add( new CollidableObject( CollidableObject.STOP, CollidableObject.DOWN, imageBomb, width, height ) );
 		}
 
-		// 캐릭터는 이동하고 HP 업데이트
+		// 캐릭터는 좌우로 이동하고 HP 업데이트
 		character.move( character.directionX(), CollidableObject.STOP );
 		updateHP();
 	}
@@ -55,6 +56,7 @@ public class BombDodgePanel extends ViewPanel
 	}
 
 	// 화면 출력
+	@Override
 	public void paint( Graphics g ) {
 		super.paint( g );
 		// 먼저, 제한시간동안 폭탄을 피해 살아남으면 성공 출력

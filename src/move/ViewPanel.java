@@ -38,6 +38,7 @@ public class ViewPanel extends JPanel
 	}
 
 	// 화면 출력
+	@Override
 	public void paint( Graphics g ){
 		super.paint( g );
 		character.paint( g );

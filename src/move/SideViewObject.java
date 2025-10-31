@@ -16,6 +16,7 @@ public class SideViewObject extends TopViewObject
 	}
 
 	// 키를 누르면 이동방향을 설정하거나 점프 이동
+	@Override
 	public void keyPressed( KeyEvent event ) {
 		super.keyPressed( event );
 		switch( event.getKeyCode() ) {
@@ -39,12 +40,14 @@ public class SideViewObject extends TopViewObject
 	}
 
 	// 중력을 고려하여 바닥까지 캐릭터 낙하
+	@Override
 	public void move( int directionX, int directionY ) {
 		for(; ( map[y+directionY][x+directionX] != WALL ) && ( map[y+directionY+1][x+directionX] != WALL ); directionY++ );
 		super.move( directionX, directionY );
 	}
 
 	// 캐릭터와 주변 맵을 출력
+	@Override
 	public void paint( Graphics g ){
 		for( int y = this.y - SCOPE, y2 = 0; y <= this.y + SCOPE; y++, y2++ ){
 			for( int x = this.x - SCOPE, x2 = 0; x <= this.x + SCOPE; x++, x2++ ){
@@ -58,9 +61,11 @@ public class SideViewObject extends TopViewObject
 		}
 	}
 
+	@Override
 	public int backgroundWidth(){
 		return IMGSIZE * ( 2*SCOPE + 1 );
 	}
+	@Override
 	public int backgroundHeight(){
 		return IMGSIZE * ( 2*SCOPE + 1 );
 	}

@@ -7,7 +7,7 @@ public class CollidableObject extends ObjectByKey
 {
 	// 초기화: 이미지, 현재 위치, 이동 허용 범위를 설정
 	public CollidableObject( final String image, int x, int y, int width, int height ) {
-		super( image, x, y, 0, 20, width, height );
+		super( image, x, y, 0, 40, width, height );
 	}
 	public CollidableObject( int directionX, int directionY, final String image, int width, int height ) {
 		this( image, 0, 40, width, height );
@@ -19,10 +19,11 @@ public class CollidableObject extends ObjectByKey
 		}
 		// 총알 초기화 : 왼쪽(임의위치)에서 오른쪽으로 총알을 발사
 		else if ( ( directionX == RIGHT ) && ( directionY == STOP ) ) {
-			this.y = 40 + (int)( Math.random() * ( this.maxY-40 ) );
+			this.y = IMGSIZE + (int)( Math.random() * ( this.maxY - IMGSIZE ) );
 		}
 	}
 	// 일정 속도로 위치 이동
+	@Override
 	public void move( int directionX, int directionY ) {
 		final int SPEED = 20;
 		super.move( directionX * SPEED, directionY * SPEED );

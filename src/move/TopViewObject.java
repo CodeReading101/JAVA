@@ -23,12 +23,14 @@ public class TopViewObject extends ObjectByKey
 	}
 
 	// 벽이 아니면 캐릭터 이동
+	@Override
 	public void move( int directionX, int directionY ) {
 		if( map[y+directionY][x+directionX] != WALL )
 			super.move( directionX, directionY );
 	}
 
 	// 캐릭터와 전체 맵을 출력
+	@Override
 	public void paint( Graphics g ){
 		for( int y = 0; y <= map.length; y++ ){
 			for( int x = 0; x <= map[0].length; x++ ){
@@ -42,9 +44,11 @@ public class TopViewObject extends ObjectByKey
 		}
 	}
 
+	@Override
 	public int backgroundWidth(){
 		return IMGSIZE * ( map[0].length );
 	}
+	@Override
 	public int backgroundHeight(){
 		return IMGSIZE * ( map.length );
 	}
