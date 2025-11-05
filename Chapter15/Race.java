@@ -1,7 +1,6 @@
 // JAVA 프로그래밍 - https://codereading101.github.io/JAVA/
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter15/Race.java
 
-import java.util.Scanner;
 // 달리기 선수
 class Player extends Thread
 {
@@ -39,4 +38,5 @@ public class Race
 		}
 	}
 }
+
 
