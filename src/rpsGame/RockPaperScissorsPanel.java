@@ -33,7 +33,6 @@ public class RockPaperScissorsPanel extends JPanel implements ActionListener
 		this.add( this.imgPlayerB );
 		this.add( this.strPlayers );
 		this.add( this.imgPlayerA );
-		// 화면 아래쪽에 가위바위보 입력 버튼 초기화
 		button = new JButton[3];
 		button[SCISSORS] = new JButton( new ImageIcon( image[SCISSORS][BASE].getImage().getScaledInstance( 30, 30, Image.SCALE_SMOOTH ) ) );
 		button[ROCK    ] = new JButton( new ImageIcon( image[ROCK    ][BASE].getImage().getScaledInstance( 30, 30, Image.SCALE_SMOOTH ) ) );

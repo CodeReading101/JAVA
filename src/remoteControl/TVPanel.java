@@ -39,6 +39,7 @@ public class TVPanel extends JPanel implements RemoteControl
 	}
 
 	// 리모컨 전원 버튼을 누르면 TV 전원 상태 변경
+	@Override
 	public void clickPower() {
 		if( power == OFF ) {
 			power = ON;
@@ -57,6 +58,7 @@ public class TVPanel extends JPanel implements RemoteControl
 	}
 
 	// 리모컨 상(△) 버튼을 누르면 TV 채널 번호 증가
+	@Override
 	public void clickUp() {
 		if( power == ON ) {
 			channel = ( channel + 1 ) % ( imgChannel.length - 1 );
@@ -65,6 +67,7 @@ public class TVPanel extends JPanel implements RemoteControl
 	}
 
 	// 리모컨 하(▽) 버튼을 누르면 TV 채널 번호 감소
+	@Override
 	public void clickDown() {
 		if( power == ON ) {
 			channel = ( channel + ( imgChannel.length - 2 ) ) % ( imgChannel.length - 1 );
@@ -73,6 +76,7 @@ public class TVPanel extends JPanel implements RemoteControl
 	}
 
 	// 리모컨 좌(◁) 버튼을 누르면 TV 음량 감소
+	@Override
 	public void clickLeft() {
 		if( power == ON ) {
 			volume = ( volume + ( imgVolume.length - 1 ) ) % imgVolume.length;
@@ -81,6 +85,7 @@ public class TVPanel extends JPanel implements RemoteControl
 	}
 
 	// 리모컨 우(▷) 버튼을 누르면 TV 음량 증가
+	@Override
 	public void clickRight() {
 		if( power == ON ) {
 			volume = ( volume + 1 ) % imgVolume.length;

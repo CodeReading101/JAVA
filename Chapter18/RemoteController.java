@@ -1,0 +1,29 @@
+// JAVA 프로그래밍 - https://codereading101.github.io/JAVA/
+// 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter18/RemoteController.java
+
+import javax.swing.*;
+import java.awt.event.*;
+import remoteControl.RemoteControlNetwork;
+
+// 리모컨으로 제어하는 리모컨 프로그램의 네트워크 클라이언트 버전
+public class RemoteController
+{
+	public static void main( String[] args ) {
+		final String imagePath = "C:\\Users\\user\\Downloads\\JAVA-main\\src\\remoteControl\\image\\";
+		String serverIP = "localhost";
+		RemoteControlNetwork panel = new RemoteControlNetwork( imagePath, serverIP );
+
+		JFrame frame = new JFrame( "리모컨(클라이언트)" );
+		frame.getContentPane().add( panel );
+		frame.addWindowListener( new WindowAdapter() {
+			public void windowClosing( WindowEvent event ) {
+				panel.close();
+			}
+		} );
+		frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+		frame.pack();
+		frame.setVisible( true );
+	}
+}
+
+

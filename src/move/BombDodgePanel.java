@@ -25,7 +25,7 @@ public class BombDodgePanel extends ViewPanel
 		setPreferredSize( new Dimension( width + CollidableObject.IMGSIZE, height ) );
 	}
 
-	// 최신 정보 업데이트
+	// 최신 정보 업데이트(Override)
 	@Override
 	protected void update() {
 		// 모든 폭탄은 아래로 떨어지며, 주기적으로 새 폭탄을 투하
@@ -55,7 +55,7 @@ public class BombDodgePanel extends ViewPanel
 		}
 	}
 
-	// 화면 출력
+	// 화면 출력(Override)
 	@Override
 	public void paint( Graphics g ) {
 		super.paint( g );

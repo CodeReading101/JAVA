@@ -12,7 +12,7 @@ public class BulletDodgePanel extends BombDodgePanel
 		setPreferredSize( new Dimension( width, height + CollidableObject.IMGSIZE ) );
 	}
 
-	// 최신 정보 업데이트
+	// 최신 정보 업데이트(Override2)
 	@Override
 	protected void update() {
 		// 모든 총알은 오른쪽으로 이동하며, 주기적으로 새 총알을 발사

@@ -35,12 +35,17 @@ public class RemoteControllerPanel extends JPanel implements ActionListener
 		this.add( button[RIGHT], BorderLayout.EAST );
 	}
 
-
 	// 가전제품(TV, 로봇청소기, 에어컨)을 제어하는 리모컨 GUI 초기화
 	public RemoteControllerPanel( String imgPath, RemoteControl appliance ) {
 		this( imgPath );
 		this.appliance = appliance;
 	}
+
+	// 가전제품(TV, 로봇청소기, 에어컨)을 제어하는 리모컨 초기화
+	public RemoteControllerPanel( RemoteControl appliance ) {
+		this.appliance = appliance;
+	}
+
 	// 리모컨 버튼을 클릭시 가전제품 상태 업데이트
 	@Override
 	public void actionPerformed( ActionEvent event ) {

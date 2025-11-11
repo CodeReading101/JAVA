@@ -1,17 +1,17 @@
 // JAVA 프로그래밍 - https://codereading101.github.io/JAVA/
-// 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/src/move/ObjectOnMap.java
+// 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/src/move/PlayerOnMap.java
 
 package move;
 
-// 맵에 있는 캐릭터 클래스
-public class ObjectOnMap
+// 맵에 있는 플레이어 캐릭터 클래스
+public class PlayerOnMap
 {
 	protected int[][] map;
 	protected int x, y, minX, minY, maxX, maxY;
 	protected final int LEFT = -1, RIGHT = 1, UP = -1, DOWN = 1, STOP = 0;
 	protected final int PATH = 0, WALL = 1, CHARACTER = 2;
 	protected final String symbol[] = { "  ", "\033[44m  \033[0m", "옷" };
-	public ObjectOnMap( int[][] map, int x, int y ) {
+	public PlayerOnMap( int[][] map, int x, int y ) {
 		this.map = map;
 		this.x = x;
 		this.y = y;
@@ -22,39 +22,23 @@ public class ObjectOnMap
 	}
 
 	// 캐릭터 이동
-	public void move( char direction ) {
-		// 이동 방향 확인
-		switch( direction ) {
-			case 'W': case 'w':
-				move( STOP, UP );
-				break;
-			case 'A': case 'a':
-				move( LEFT, STOP );
-				break;
-			case 'S': case 's':
-				move( STOP, DOWN );
-				break;
-			case 'D': case 'd':
-				move( RIGHT, STOP );
-				break;
-		}
-	}
+	public void move( int x, int y ) {
+		this.x += x;
+		this.y += y;
 
-	// 벽인지 허용 범위인지 확인하고 캐릭터 이동
-	public void move( int directionX, int directionY ) {
-		if( map[this.y+directionY][this.x+directionX] == WALL )
-			return;
-
-		this.x += directionX;
-		this.y += directionY;
+		// 이때, 이동하려는 위치가 허용 범위인지 벽인지 확인
 		this.x = ( this.x <= minX ) ? minX : this.x;
 		this.y = ( this.y <= minY ) ? minY : this.y;
 		this.x = ( this.x >= maxX ) ? maxX : this.x;
 		this.y = ( this.y >= maxY ) ? maxY : this.y;
+
+		if( map[this.y][this.x] == WALL ) {
+			this.x -= x;
+			this.y -= y;
+		}
 	}
 
-	// 캐릭터 및 전체 맵 표현
-	@Override
+	// 맵에서 캐릭터 위치 표현
 	public String toString() {
 		String strMap = "\033[1;1f";
 		for( int y = minY; y <= maxY; y++ ) {
