@@ -2,6 +2,7 @@
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter03/WeatherNews.java
 
 import java.util.Scanner;
+
 public class WeatherNews
 {
 	public static void main( String[] args ) {

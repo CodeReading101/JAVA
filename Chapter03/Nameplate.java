@@ -2,6 +2,7 @@
 // 소스파일 - https://github.com/CodeReading101/JAVA/blob/main/Chapter03/Nameplate.java
 
 import java.util.Scanner;
+
 public class Nameplate
 {
 	public static void main( String[] args ) {
