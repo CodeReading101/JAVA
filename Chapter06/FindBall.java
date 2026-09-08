@@ -20,28 +20,22 @@ public class FindBall
 		System.out.println( " | 1 |  | 2 |  | 3 | " );
 		// 숨긴 공 출력
 		switch( ball ) {
+		case 3:
+			System.out.print( "       " );
+		case 2:
+			System.out.print( "       " );
 		case 1:
 			System.out.print( "   " );
-			break;
-		case 2:
-			System.out.print( "          " );
-			break;
-		case 3:
-			System.out.print( "                 " );
-			break;
 		}
 		System.out.println( "O" );
 		// 공 찾기 결과를 출력
 		switch( cup ) {
+		case 3:
+			System.out.print( "       " );
+		case 2:
+			System.out.print( "       " );
 		case 1:
 			System.out.print( " " );
-			break;
-		case 2:
-			System.out.print( "        " );
-			break;
-		case 3:
-			System.out.print( "               " );
-			break;
 		}
 		System.out.print( ( cup == ball ) ? "찾았다!" : "놓쳤다!" );
 		scan.close();
