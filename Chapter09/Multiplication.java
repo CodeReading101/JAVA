@@ -8,10 +8,9 @@ public class Multiplication
 		for( int row = 1; row <= 9; row++ ) {
 			// 구구단 한 칸씩 출력
 			for( int column = 1; column <= 9; column++ ) {
-				System.out.printf(" %d * %d = %2d ", row, column, column * row );
+				System.out.printf(" %d * %d = %2d ", column, row, column * row );
 			}
 			System.out.println();
 		}
 	}
 }
-
