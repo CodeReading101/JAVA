@@ -18,6 +18,7 @@ public class Platformer
 			user = Integer.parseInt( scan.nextLine() );
 			// 안전한 발판을 선택하면 다음 단계로 이동
 		} while( platform == user );
+		// 아니면 아래로 추락
 		String margin = ( user == 1 ) ? "" : "    ";
 		System.out.print( margin + "슈\n" + margin + "우\n" + margin + "우\n" + margin + "웅\n" + margin + "쿵!" );
 		scan.close();
