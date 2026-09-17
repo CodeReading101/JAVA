@@ -18,7 +18,8 @@ public class Platformer
 			user = Integer.parseInt( scan.nextLine() );
 			// 안전한 발판을 선택하면 다음 단계로 이동
 		} while( platform == user );
-		System.out.print( "\n앗!! 무늬만 발판인 페이크였네요. 허공을 가르며 슈~~웅 콰당!" );
+		String margin = ( user == 1 ) ? "" : "    ";
+		System.out.print( margin + "슈\n" + margin + "우\n" + margin + "우\n" + margin + "웅\n" + margin + "쿵!" );
 		scan.close();
 	}
 }
