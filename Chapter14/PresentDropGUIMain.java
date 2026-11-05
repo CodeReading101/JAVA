@@ -7,7 +7,7 @@ public class PresentDropGUIMain
 {
 	public static void main(String[] args)
 	{
-		final String background = "C:\\Users\\user\\Downloads\\JAVA-main\\Chapter13\\image\\background.jpg";
+		final String background = "C:\\Users\\user\\Downloads\\JAVA-main\\Chapter14\\image\\background.jpg";
 
 		// 프레임에 패널을 끼우고 실행 준비 완료
 		JFrame frame = new JFrame ( "선물 배달" );
