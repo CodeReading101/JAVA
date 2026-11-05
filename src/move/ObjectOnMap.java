@@ -22,7 +22,7 @@ public class ObjectOnMap
 		this.maxY = ( map == null ) ? 0 : map.length-1;
 	}
 
-	// 캐릭터 이동
+	// 캐릭터 이동하기
 	public void move( char direction ) {
 		// 이동 방향 확인
 		switch( direction ) {
