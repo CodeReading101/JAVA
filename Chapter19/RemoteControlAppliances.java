@@ -19,7 +19,7 @@ public class RemoteControlAppliances
 		                            };
 		for ( int i = 0; i < appliance.length; i++  )
 		{
-			RemoteControlNetwork panel = new RemoteControlNetwork( imagePath, appliance[i], serverIP );
+			RemoteControlNetwork panel = new RemoteControlNetwork( appliance[i], serverIP );
 
 			JFrame frame = new JFrame( applianceName[i] );
 			frame.getContentPane().add( (JPanel)appliance[i] );
